@@ -47,6 +47,6 @@ app.get("/api", (req, res) => {
 	res.json(rappers);
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
 	console.log(`The server is running on port ${PORT}. you better go catch it`);
 });
