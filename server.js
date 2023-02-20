@@ -24,10 +24,10 @@ let rappers = {
 		name: "David Orobosa Omoregie",
 		birthCountry: "Brixton, London, England",
 	},
-	dylan: {
-		age: 38,
-		name: "Dylan",
-		birthCountry: "Dylan",
+	unkown: {
+		age: 0,
+		name: "unknown",
+		birthCountry: "unkown",
 	},
 };
 
@@ -41,7 +41,7 @@ app.get("/api/:name", (req, res) => {
 	if (rappers[rapperName]) {
 		res.json(rappers[rapperName]);
 	} else {
-		res.json(rappers["dylan"]);
+		res.json(rappers["unkown"]);
 	}
 	// res.json(rappers);
 });
